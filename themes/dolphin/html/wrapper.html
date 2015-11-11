@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>{$title}</title>
+<link rel="shortcut icon" href="{$url}/favicon.ico" />
+<link href="{$url}/{$theme_path}/{$theme_name}/style.css" rel="stylesheet" type="text/css" />
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+<script type="text/javascript" src="{$url}/{$theme_url}/js/jquery.js"></script>
+<script type="text/javascript" src="{$url}/{$theme_url}/js/jquery.timeago.js"></script>
+<script type="text/javascript" src="{$url}/{$theme_url}/js/functions.js"></script>
+</head>
+<body>
+<div id="loading-bar"><dd></dd><dt></dt></div>
+<div class="topbar">
+	<div class="header">
+		<a href="{$url_logo}" rel="loadpage"><div class="menu_btn logo-container"><div class="logo"></div></div></a>
+		<div class="search-input"><input type="text" id="search" placeholder="{$lng->search_for_people}" autocomplete="off" value="{$current_search}"></div>
+		{$menu}
+	</div>
+	<div class="search-container"></div>
+</div>
+<div id="content">
+	{$content}
+</div>
+<div class="footer">
+	<div class="footer-container">
+		<div class="footer-links">
+			<a href="{$url}/index.php?a=page&b=tos" rel="loadpage">{$lng->terms_of_use}</a> - 
+			<a href="{$url}/index.php?a=page&b=privacy" rel="loadpage">{$lng->privacy_policy}</a> - 
+			<a href="{$url}/index.php?a=page&b=disclaimer" rel="loadpage">{$lng->disclaimer}</a> - 
+			<a href="{$url}/index.php?a=page&b=api" rel="loadpage">{$lng->developers}</a> - 
+			<a href="{$url}/index.php?a=page&b=contact" rel="loadpage">{$lng->contact}</a> - 
+			<a href="{$url}/index.php?a=page&b=about" rel="loadpage">{$lng->about}</a> - 
+			<a href="{$url}/index.php?a=admin" rel="loadpage">{$lng->title_admin}</a>
+		</div>
+		<div class="footer-languages">
+			{$lng->language}: {$language}
+		</div>
+		<div class="footer-languages">
+			Copyright &copy; {$year} {$footer}. {$lng->all_rights_reserved}. {$powered_by}
+		</div>
+	</div>
+</div>
+</body>
+</html>
